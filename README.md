@@ -23,3 +23,5 @@ Python 3.9+
 
 ```bash
 pip install numpy matplotlib scipy scikit-learn nltk jupyter
+## Notes
+This project is educational and focuses on understanding statistical estimation and logistic regression.
