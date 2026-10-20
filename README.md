@@ -1,27 +1,44 @@
-# MLE / MAP and Logistic Regression (From Scratch)
+# Maximum Likelihood, MAP Estimation and Logistic Regression from Scratch
 
-This repository contains a Jupyter Notebook covering:
-- Maximum Likelihood Estimation (MLE)
-- Maximum A Posteriori (MAP)
-- Logistic Regression implemented from scratch
-- (Optional) Tweet sentiment classification using NLTK
+A hands-on treatment of **statistical estimation and binary classification**, written from scratch in NumPy: likelihood-based estimation, the role of priors, and a regularised logistic regression trained by gradient descent.
 
-## File
-- `MLE_MAP_LR.ipynb`
+<p align="center">
+  <img src="figures/log_likelihood_grid.png" width="45%" alt="Grid approximation of the log-likelihood">
+  <img src="figures/logistic_decision_boundary.png" width="45%" alt="Logistic regression decision boundary">
+</p>
 
-## Topics
-- Gaussian noise simulation
-- MLE vs MAP intuition
-- Logistic Regression:
-  - Sigmoid
-  - Cost function with regularization
-  - Gradients and gradient descent
-  - Decision boundary visualization
+## Contents
 
-## Requirements
-Python 3.9+
+### 1. MLE and MAP
+
+- A simulated measurement problem: estimating an object's true weight from 100 noisy measurements
+- Maximum likelihood by grid approximation of the log-likelihood, and comparison with the closed-form estimator
+- MAP estimation under different priors, showing when the prior dominates and when the data do
+- Sensitivity of MAP estimates to prior choice and to grid resolution
+
+### 2. Logistic regression from scratch
+
+- Sigmoid link, cross-entropy cost with L2 regularisation, analytic gradients
+- Batch gradient descent with convergence monitoring
+- Decision boundaries for linearly separable and overlapping simulated classes
+- An application to tweet sentiment classification with NLTK-based features
+
+## Repository structure
+
+```
+MLE_MAP_LR.ipynb   # estimation, priors and logistic regression
+figures/           # selected figures exported from the notebook
+```
+
+## Reproducing
 
 ```bash
-pip install numpy matplotlib scipy scikit-learn nltk jupyter
-## Notes
-This project is educational and focuses on understanding statistical estimation and logistic regression.
+pip install numpy matplotlib scipy scikit-learn nltk
+```
+
+## Context
+
+Developed for the graduate Machine Learning course at Sharif University of Technology (2025).
+
+---
+**Shayan Pourmasoomi** · MSc Economics, Sharif University of Technology · [LinkedIn](https://www.linkedin.com/in/shayan-pourmasoomi-8b6206389)
